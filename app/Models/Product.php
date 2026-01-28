@@ -14,6 +14,10 @@ class Product extends Model
         'active'
     ];
 
+    protected $casts = [
+        'active' => 'boolean',
+    ];
+
     public function saleItems()
     {
         return $this->hasMany(SaleItem::class);
